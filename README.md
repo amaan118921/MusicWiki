@@ -65,7 +65,4 @@ MusicWiki is an unofficial Last.fm app that contains information about different
 
 <img src="https://user-images.githubusercontent.com/74188230/214114859-9294e39f-84ab-4b57-8761-d65fec5b52be.png" width="220" height="500"/>   <img src="https://user-images.githubusercontent.com/74188230/214114947-da6adcc1-e377-44ee-83ad-4abb1f295433.png" width="220" height="500"/>
 
-
-
-
 * [Amaan Ur Rahman](https://github.com/amaan118921)
