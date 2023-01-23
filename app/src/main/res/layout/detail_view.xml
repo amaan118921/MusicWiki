@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@color/genre_background"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            >
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/ivAlbumImage"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAlbumTitle"
+                android:text="@string/title"
+                app:layout_constraintTop_toBottomOf="@id/ivAlbumImage"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/robotoregular"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTitle"
+                tools:text="@string/dynamite"
+                app:layout_constraintStart_toEndOf="@id/tvAlbumTitle"
+                app:layout_constraintTop_toTopOf="@id/tvAlbumTitle"
+                app:layout_constraintBottom_toBottomOf="@id/tvAlbumTitle"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvArtistTitle"
+                android:text="@string/artist"
+                app:layout_constraintTop_toBottomOf="@id/tvAlbumTitle"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/robotoregular"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="7dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvArtist"
+                tools:text="@string/bts"
+                app:layout_constraintStart_toEndOf="@id/tvArtistTitle"
+                app:layout_constraintTop_toTopOf="@id/tvArtistTitle"
+                app:layout_constraintBottom_toBottomOf="@id/tvArtistTitle"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

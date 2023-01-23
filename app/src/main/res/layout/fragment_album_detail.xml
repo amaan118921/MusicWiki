@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_marginTop="17dp"
+        android:id="@+id/ivAlbumDetail"
+        android:src="@drawable/img"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvAlbumDetail"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintTop_toBottomOf="@id/ivAlbumDetail"
+        android:layout_marginTop="15dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAlbum"
+        app:layout_constraintTop_toBottomOf="@id/rvAlbumDetail"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="The Carnival"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/robotomedium"
+        android:layout_marginTop="30dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvArtist"
+        app:layout_constraintTop_toBottomOf="@id/tvAlbum"
+        app:layout_constraintStart_toStartOf="@id/tvAlbum"
+        android:textColor="@color/white"
+        tools:text="King"
+        android:textSize="15sp"
+        android:fontFamily="@font/robotomedium"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="45dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@id/tvGenreDesc"
+        app:layout_constraintTop_toBottomOf="@id/tvArtist"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:fontFamily="@font/robotoregular"
+        tools:text="sfhaskfjdskjfkdjfkl jfkl sajfkl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="15dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

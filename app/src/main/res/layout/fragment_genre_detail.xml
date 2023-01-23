@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/clDetail"
+       >
+       <com.google.android.material.textview.MaterialTextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/tvGenreTitle"
+           tools:text="@string/rock"
+           android:textColor="@color/white"
+           android:textStyle="bold"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginTop="50dp"
+           android:textSize="24sp"
+           android:fontFamily="@font/robotomedium"/>
+
+       <com.google.android.material.textview.MaterialTextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/tvGenreDesc"
+           android:textSize="14sp"
+           android:textColor="@color/white"
+           android:fontFamily="@font/robotoregular"
+           app:layout_constraintTop_toBottomOf="@id/tvGenreTitle"
+           android:layout_marginHorizontal="25dp"
+           android:layout_marginTop="30dp"
+           android:gravity="start"/>
+
+       <com.google.android.material.tabs.TabLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/tabLayout"
+           app:tabTextColor="@color/white"
+           android:background="@color/genre_background"
+           app:tabIndicatorColor="@color/background"
+           app:layout_constraintTop_toBottomOf="@id/tvGenreDesc"
+           android:layout_marginTop="25dp"
+           >
+           <com.google.android.material.tabs.TabItem
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/tabAlbums"
+               android:text="@string/albums"/>
+           <com.google.android.material.tabs.TabItem
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/tabArtists"
+               android:text="@string/artists"/>
+           <com.google.android.material.tabs.TabItem
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/tabTracks"
+               android:text="@string/tracks"/>
+       </com.google.android.material.tabs.TabLayout>
+
+
+       <androidx.viewpager2.widget.ViewPager2
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:id="@+id/viewPager"
+           app:layout_constraintTop_toBottomOf="@id/tabLayout"
+           app:layout_constraintBottom_toBottomOf="parent">
+
+       </androidx.viewpager2.widget.ViewPager2>
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/pfDetail">
+        <include layout="@layout/progress_frame_layout"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

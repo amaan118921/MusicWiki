@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/cl"
+                >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_marginTop="17dp"
+        android:id="@+id/ivArtistDetail"
+        android:src="@drawable/img"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvArtistDetail"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintTop_toBottomOf="@id/ivArtistDetail"
+        android:layout_marginTop="15dp"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvArtist"
+        app:layout_constraintTop_toBottomOf="@id/rvArtistDetail"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="King"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/robotomedium"
+        android:layout_marginTop="30dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvPlayCount"
+        app:layout_constraintTop_toBottomOf="@id/tvArtist"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="King"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/robotomedium"
+        android:layout_marginTop="15dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvFollowers"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayCount"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="King"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/robotomedium"
+        android:layout_marginTop="15dp"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@id/tvGenreDesc"
+        app:layout_constraintTop_toBottomOf="@id/tvFollowers"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:fontFamily="@font/robotoregular"
+        tools:text="sfhaskfjdskjfkdjfkl jfkl sajfkl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="15dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTopTracks"
+        android:text="@string/top_tracks"
+        app:layout_constraintTop_toBottomOf="@id/tvGenreDesc"
+        app:layout_constraintStart_toStartOf="@id/tvGenreDesc"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:fontFamily="@font/robotomedium"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvTopTracks"
+        app:layout_constraintTop_toBottomOf="@id/tvTopTracks"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="@id/tvGenreDesc"
+        app:layout_constraintEnd_toEndOf="@id/tvGenreDesc"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTopAlbums"
+        android:text="@string/top_albums"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:fontFamily="@font/robotomedium"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/rvTopTracks"
+        app:layout_constraintStart_toStartOf="@id/tvGenreDesc"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rvTopAlbums"
+                app:layout_constraintTop_toBottomOf="@id/tvTopAlbums"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="@id/tvGenreDesc"
+                app:layout_constraintEnd_toEndOf="@id/tvGenreDesc"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/pfArtist"
+            >
+            <include layout="@layout/progress_frame_layout"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
